@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="dottedline_slider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovg-ci-sq3" customClass="DashedSlider" customModule="dottedline_slider" customModuleProvider="target">
+                                <rect key="frame" x="20" y="84" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hzt-KJ-lOM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QD-hB-qmL" customClass="DashedSlider" customModule="dottedline_slider" customModuleProvider="target">
+                                <rect key="frame" x="20" y="134" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfA-ze-v4q" customClass="DashedSlider" customModule="dottedline_slider" customModuleProvider="target">
+                                <rect key="frame" x="20" y="184" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdX-M6-7b5" customClass="DashedSlider" customModule="dottedline_slider" customModuleProvider="target">
+                                <rect key="frame" x="20" y="234" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-JT-09H" customClass="DashedSlider" customModule="dottedline_slider" customModuleProvider="target">
+                                <rect key="frame" x="20" y="284" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GdX-M6-7b5" firstAttribute="centerX" secondItem="bfA-ze-v4q" secondAttribute="centerX" id="BKc-h4-XmS"/>
+                            <constraint firstItem="1yP-JT-09H" firstAttribute="centerX" secondItem="GdX-M6-7b5" secondAttribute="centerX" id="D0P-y9-QQY"/>
+                            <constraint firstItem="ovg-ci-sq3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="EMF-ec-12t"/>
+                            <constraint firstItem="GdX-M6-7b5" firstAttribute="height" secondItem="bfA-ze-v4q" secondAttribute="height" id="HXp-st-5co"/>
+                            <constraint firstItem="7QD-hB-qmL" firstAttribute="height" secondItem="ovg-ci-sq3" secondAttribute="height" id="M36-nY-8nb"/>
+                            <constraint firstItem="1yP-JT-09H" firstAttribute="width" secondItem="GdX-M6-7b5" secondAttribute="width" id="N4d-TT-cuF"/>
+                            <constraint firstItem="bfA-ze-v4q" firstAttribute="centerX" secondItem="7QD-hB-qmL" secondAttribute="centerX" id="ST7-OC-xby"/>
+                            <constraint firstItem="GdX-M6-7b5" firstAttribute="top" secondItem="bfA-ze-v4q" secondAttribute="bottom" constant="20" id="UVD-xD-HQP"/>
+                            <constraint firstItem="bfA-ze-v4q" firstAttribute="width" secondItem="7QD-hB-qmL" secondAttribute="width" id="Whp-of-b5L"/>
+                            <constraint firstItem="7QD-hB-qmL" firstAttribute="top" secondItem="ovg-ci-sq3" secondAttribute="bottom" constant="20" id="X7T-hv-PSU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ovg-ci-sq3" secondAttribute="trailing" constant="20" id="Xlq-Kh-aVq"/>
+                            <constraint firstItem="1yP-JT-09H" firstAttribute="top" secondItem="GdX-M6-7b5" secondAttribute="bottom" constant="20" id="ZMD-k6-TrB"/>
+                            <constraint firstItem="bfA-ze-v4q" firstAttribute="height" secondItem="7QD-hB-qmL" secondAttribute="height" id="ZbH-yu-RKo"/>
+                            <constraint firstItem="GdX-M6-7b5" firstAttribute="width" secondItem="bfA-ze-v4q" secondAttribute="width" id="dDZ-uu-ZR8"/>
+                            <constraint firstItem="bfA-ze-v4q" firstAttribute="top" secondItem="7QD-hB-qmL" secondAttribute="bottom" constant="20" id="dtJ-u7-6Pb"/>
+                            <constraint firstItem="1yP-JT-09H" firstAttribute="height" secondItem="GdX-M6-7b5" secondAttribute="height" id="kNp-nl-UmY"/>
+                            <constraint firstItem="7QD-hB-qmL" firstAttribute="centerX" secondItem="ovg-ci-sq3" secondAttribute="centerX" id="trc-y3-ZxC"/>
+                            <constraint firstItem="ovg-ci-sq3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vpM-b4-Zug"/>
+                            <constraint firstItem="7QD-hB-qmL" firstAttribute="width" secondItem="ovg-ci-sq3" secondAttribute="width" id="wKZ-vc-HWq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="ovg-ci-sq3" id="a9d-Ai-Zej"/>
+                        <outlet property="slider2" destination="7QD-hB-qmL" id="syg-dc-sB2"/>
+                        <outlet property="slider3" destination="bfA-ze-v4q" id="zdj-4M-dPF"/>
+                        <outlet property="slider4" destination="GdX-M6-7b5" id="BNZ-9H-tsO"/>
+                        <outlet property="slider5" destination="1yP-JT-09H" id="puY-bv-90M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
