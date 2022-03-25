@@ -1,39 +1,32 @@
-//
-//  slider_temp.swift
-//  dottedline_slider
-//
-//  Created by   Валерий Мельников on 25.03.2022.
-//
-
 import Foundation
 import UIKit
 import CoreGraphics
 
-public class DashedSlider: UISlider {
+ @objc class DashedSlider: UISlider {
     
     let DEFAULT_MARKER_COUNT:Int = 25
     let DEFAULT_MARK_WIDTH:CGFloat = 4.0
     let DEFAULT_TOP_MARGIN:CGFloat = 3.0
     
-    public var selectedBarColor:UIColor! {
+    @objc public var selectedBarColor:UIColor! {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-    public var unselectedBarColor:UIColor! {
+    @objc  public var unselectedBarColor:UIColor! {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-    public var markColor:UIColor! {
+    @objc public var markColor:UIColor! {
         didSet {
             self.setNeedsLayout()
         }
     }
     
-    public var handlerColor:UIColor? {
+    @objc  public var handlerColor:UIColor? {
         didSet {
             self.setNeedsLayout()
         }
@@ -41,29 +34,65 @@ public class DashedSlider: UISlider {
     
     // number of markers to draw
     // 1 to 100
-    public var markerCount:Int! {
+      public var markerCount: Int! {
         didSet {
             self.setNeedsLayout()
         }
     }
+     
+     @objc public var _markerCount : NSNumber!{
+         get {
+             return markerCount as NSNumber?
+         }
+         set(newNumber) {
+             markerCount = newNumber?.intValue
+         }
+     }
     
-    public var markWidth:CGFloat! {
+     public var markWidth:CGFloat! {
         didSet {
             self.setNeedsLayout()
         }
     }
+     
+     @objc public var _markWidth : NSNumber!{
+         get {
+             return markWidth as NSNumber?
+         }
+         set(newNumber) {
+             markWidth = CGFloat (newNumber!.floatValue)
+         }
+     }
     
-    public var topMargin:CGFloat! {
+     public var topMargin:CGFloat! {
         didSet {
             self.setNeedsLayout()
         }
     }
+     
+     @objc public var _topMargin : NSNumber!{
+         get {
+             return topMargin as NSNumber?
+         }
+         set(newNumber) {
+             topMargin = CGFloat (newNumber!.floatValue)
+         }
+     }
     
-    public var handlerWidth:CGFloat? {
+     public var handlerWidth:CGFloat? {
         didSet {
             self.setNeedsLayout()
         }
     }
+     
+     @objc public var _handlerWidth : NSNumber!{
+         get {
+             return handlerWidth as NSNumber?
+         }
+         set(newNumber) {
+             handlerWidth = CGFloat (newNumber!.floatValue)
+         }
+     }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
